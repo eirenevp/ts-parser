@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "ESNEXT",
+        "lib": [
+            "es5",
+            "esnext",
+            "dom"
+        ],
+        "types": [
+            "node"
+        ],
+        // "noImplicitAny": true,
+        "outDir": "./dist",
+        "checkJs": true,
+        "pretty": true,
+        "allowJs": true,
+        "sourceMap": true,
+        "listEmittedFiles": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        // "resolveJsonModule": true,
+        // "esModuleInterop": true,
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "./src/*"
+            ]
+        }
+    },
+    "include": [
+        "./src/*.ts",
+    ]
+}

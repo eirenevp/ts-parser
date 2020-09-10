@@ -1,0 +1,26 @@
+{
+  "name": "ts-parser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irenevp/ts-parser.git"
+  },
+  "author": "Irene Vlassi Pandi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/irenevp/ts-parser/issues"
+  },
+  "homepage": "https://github.com/irenevp/ts-parser#readme",
+  "devDependencies": {
+    "@types/node": "^14.6.4",
+    "byots": "^4.1.0-dev.20200910.15.8",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {}
+}

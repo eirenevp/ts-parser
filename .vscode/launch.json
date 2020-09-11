@@ -13,7 +13,8 @@
             ],
             "program": "${workspaceFolder}/dist/parser.js",
             "args": [
-                "${workspaceFolder}/test-files/functions.ts"
+                "${workspaceFolder}/test-files/functions.ts",
+                "${workspaceFolder}/parsedFunctions.csv"
             ],
             "outFiles": [
                 "${workspaceFolder}/**/*.js"

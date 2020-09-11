@@ -14,7 +14,7 @@ interface INodeEntry {
     statement?: string;
 };
 
-export function parse(fileNames: string[], options: ts.CompilerOptions): void {
+export function parse(fileNames: string[], outFile: string[], options: ts.CompilerOptions): void {
 
     // const program = ts.createProgram(fileNames, options);
     // const checker = program.getDiagnosticsProducingTypeChecker();
@@ -32,25 +32,26 @@ export function parse(fileNames: string[], options: ts.CompilerOptions): void {
     });
     function parseNode(node: ts.Node) {
         if (ts.isFunctionDeclaration(node)) {
-            fs.appendFileSync("parsedFunctions.csv", node.name.getText() + ',,');
-            let body = node.body.getText();
-            body = body.replace(/\r?\n|\r/g, " ");
-            fs.appendFileSync("parsedFunctions.csv", body + '\n');
-            console.log(node.name.getText());
-            console.log(node.body.getText());
+            fs.appendFileSync(outFile[0], '"' + fileNames[0] + '"' + ',');
+            fs.appendFileSync(outFile[0], '"' + node.name.getText() + '"' + ',');
+            if (node.body != undefined) {
+                let body = node.body.getText().replace(/\"/g, "'");
+                body = '"' + body.replace(/\r?\n|\r|\t|\s{2,}/g, " ") + '"';
+                fs.appendFileSync(outFile[0], body + '\n');
+            }
+            else {
+                fs.appendFileSync(outFile[0], '"' + "no body" + '"' + '\n');
+            }
+            // console.log(node.name.getText());
+            // console.log(node.body.getText());
         }
 
         ts.forEachChild(node, parseNode);
     }
-
-    // function report(node: ts.Node, message: string) {
-    //     const { line, character } = sourceFile.getLineAndCharacterOfPosition(node.getStart());
-    //     console.log(`${sourceFile.fileName} (${line + 1},${character + 1}): ${message}`);
-    // }
 }
 
 
-parse(process.argv.slice(2), {
+parse(process.argv.slice(2), process.argv.slice(3), {
     target:
         ts.ScriptTarget.Latest, module: ts.ModuleKind.CommonJS, "removeComments": true
 });

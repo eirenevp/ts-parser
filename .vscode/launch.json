@@ -5,6 +5,19 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python: Parser",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": false,
+            "pythonPath": "${command:python.interpreterPath}",
+            "program": "${workspaceFolder}/src/parser-constraints.py",
+            "args": [
+                "--in_file=opttyper/Evaluation/PureTypeScript/bespoken_bst/opttyper.index.constraints.json",
+                "--out_file=ts-parser/parsedConstraints.csv"
+            ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
@@ -13,7 +26,7 @@
             ],
             "program": "${workspaceFolder}/dist/parser.js",
             "args": [
-                "${workspaceFolder}/test-files/functions.ts",
+                "${workspaceFolder}/test-files/functions-no-types.ts",
                 "${workspaceFolder}/parsedFunctions.csv"
             ],
             "outFiles": [

@@ -1,0 +1,450 @@
+{
+    "var2num": {
+        "getLens": 0,
+        "b64": 1,
+        "byteLength": 2,
+        "_byteLength": 3,
+        "validLen": 4,
+        "placeHoldersLen": 5,
+        "toByteArray": 6,
+        "tripletToBase64": 7,
+        "num": 8,
+        "encodeChunk": 9,
+        "uint8": 10,
+        "start": 11,
+        "end": 12,
+        "fromByteArray": 13
+    },
+    "typ2num": {
+        "string[]": 0,
+        "StringConstructor": 1,
+        "Blob": 2,
+        "Uint8Array | number[]": 3,
+        "undefined": 4,
+        "boolean | string[]": 5,
+        "Plugin": 6,
+        "string | Buffer": 7,
+        "string | Function": 8,
+        "number[]": 9,
+        "SVGLength": 10,
+        "Uint8ClampedArray": 11,
+        "number | boolean": 12,
+        "String": 13,
+        "Float64Array": 14,
+        "string | number": 15,
+        "{}": 16,
+        "SVGTransform": 17,
+        "Selection": 18,
+        "number": 19,
+        "{ [key: number]: string; }": 20,
+        "Promise<void>": 21,
+        "Date": 22,
+        "Buffer[]": 23,
+        "string": 24,
+        "Int16Array": 25,
+        "Location": 26,
+        "Body": 27,
+        "{ [key: number]: any; }": 28,
+        "boolean[]": 29,
+        "NodeList": 30,
+        "Int8Array": 31,
+        "Storage": 32,
+        "{ [key: string]: any; }": 33,
+        "string[][]": 34,
+        "(fn: () => void) => void": 35,
+        "ClientRect": 36,
+        "string | Uint8Array | number[] | ArrayBuffer": 37,
+        "{ [id: string]: number; }": 38,
+        "Number": 39,
+        "{ [key: string]: string; }": 40,
+        "string | string[]": 41,
+        "symbol": 42,
+        "object": 43,
+        "Uint32Array": 44,
+        "Uint8Array": 45,
+        "string | number[]": 46,
+        "BooleanConstructor": 47,
+        "JSON": 48,
+        "EventTarget": 49,
+        "Promise<T>": 50,
+        "Position": 51,
+        "Event": 52,
+        "Function": 53,
+        "Headers": 54,
+        "object[]": 55,
+        "this": 56,
+        "SVGAnimatedLength": 57,
+        "RegExp[]": 58,
+        "{ [key: string]: number; }": 59,
+        "any[]": 60,
+        "ArrayBuffer": 61,
+        "{ [name: string]: string[]; }": 62,
+        "Boolean": 63,
+        "URL": 64,
+        "DataView": 65,
+        "Int32Array": 66,
+        "HigherOrderFn": 67,
+        "T[]": 68,
+        "any": 69,
+        "boolean": 70,
+        "EventListener": 71,
+        "null": 72,
+        "() => void": 73,
+        "SVGAnimatedEnumeration": 74,
+        "Uint16Array": 75,
+        "Float32Array": 76,
+        "(value: number) => void": 77
+    },
+    "constraints": [
+        {
+            "id": "AND",
+            "children": [
+                {
+                    "id": "IS",
+                    "X": 0,
+                    "T": 60
+                },
+                {
+                    "id": "IS",
+                    "X": 2,
+                    "T": 19
+                },
+                {
+                    "id": "IS",
+                    "X": 3,
+                    "T": 19
+                },
+                {
+                    "id": "IS",
+                    "X": 9,
+                    "T": 24
+                },
+                {
+                    "id": "IS",
+                    "X": 13,
+                    "T": 24
+                },
+                {
+                    "id": "OR",
+                    "children": [
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 13
+                        },
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 24
+                        },
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 53
+                        }
+                    ]
+                },
+                {
+                    "id": "OR",
+                    "children": [
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 13
+                        },
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 24
+                        }
+                    ]
+                },
+                {
+                    "id": "OR",
+                    "children": [
+                        {
+                            "id": "AND",
+                            "children": [
+                                {
+                                    "id": "IS",
+                                    "X": 4,
+                                    "T": 24
+                                },
+                                {
+                                    "id": "IS",
+                                    "X": 5,
+                                    "T": 24
+                                }
+                            ]
+                        },
+                        {
+                            "id": "AND",
+                            "children": [
+                                {
+                                    "id": "IS",
+                                    "X": 4,
+                                    "T": 19
+                                },
+                                {
+                                    "id": "IS",
+                                    "X": 5,
+                                    "T": 19
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "IS",
+                    "X": 5,
+                    "T": 19
+                },
+                {
+                    "id": "OR",
+                    "children": [
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 13
+                        },
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 24
+                        }
+                    ]
+                },
+                {
+                    "id": "OR",
+                    "children": [
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 13
+                        },
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 24
+                        }
+                    ]
+                },
+                {
+                    "id": "OR",
+                    "children": [
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 13
+                        },
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 24
+                        }
+                    ]
+                },
+                {
+                    "id": "OR",
+                    "children": [
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 13
+                        },
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 24
+                        }
+                    ]
+                },
+                {
+                    "id": "OR",
+                    "children": [
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 13
+                        },
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 24
+                        }
+                    ]
+                },
+                {
+                    "id": "OR",
+                    "children": [
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 13
+                        },
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 24
+                        }
+                    ]
+                },
+                {
+                    "id": "OR",
+                    "children": [
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 13
+                        },
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 24
+                        }
+                    ]
+                },
+                {
+                    "id": "OR",
+                    "children": [
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 13
+                        },
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 24
+                        }
+                    ]
+                },
+                {
+                    "id": "OR",
+                    "children": [
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 13
+                        },
+                        {
+                            "id": "IS",
+                            "X": 1,
+                            "T": 24
+                        }
+                    ]
+                },
+                {
+                    "id": "IS",
+                    "X": 8,
+                    "T": 19
+                },
+                {
+                    "id": "IS",
+                    "X": 8,
+                    "T": 19
+                },
+                {
+                    "id": "IS",
+                    "X": 8,
+                    "T": 19
+                },
+                {
+                    "id": "IS",
+                    "X": 8,
+                    "T": 19
+                },
+                {
+                    "id": "OR",
+                    "children": [
+                        {
+                            "id": "AND",
+                            "children": [
+                                {
+                                    "id": "IS",
+                                    "X": 11,
+                                    "T": 24
+                                },
+                                {
+                                    "id": "IS",
+                                    "X": 12,
+                                    "T": 24
+                                }
+                            ]
+                        },
+                        {
+                            "id": "AND",
+                            "children": [
+                                {
+                                    "id": "IS",
+                                    "X": 11,
+                                    "T": 19
+                                },
+                                {
+                                    "id": "IS",
+                                    "X": 12,
+                                    "T": 19
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "IS",
+                    "X": 11,
+                    "T": 19
+                },
+                {
+                    "id": "IS",
+                    "X": 10,
+                    "T": 19
+                },
+                {
+                    "id": "OR",
+                    "children": [
+                        {
+                            "id": "IS",
+                            "X": 11,
+                            "T": 24
+                        },
+                        {
+                            "id": "IS",
+                            "X": 11,
+                            "T": 19
+                        }
+                    ]
+                },
+                {
+                    "id": "IS",
+                    "X": 11,
+                    "T": 19
+                },
+                {
+                    "id": "IS",
+                    "X": 11,
+                    "T": 19
+                },
+                {
+                    "id": "OR",
+                    "children": [
+                        {
+                            "id": "IS",
+                            "X": 10,
+                            "T": 13
+                        },
+                        {
+                            "id": "IS",
+                            "X": 10,
+                            "T": 24
+                        },
+                        {
+                            "id": "IS",
+                            "X": 10,
+                            "T": 53
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

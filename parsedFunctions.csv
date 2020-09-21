@@ -4699,4 +4699,4 @@ File,FnId,Type
 "../test-repos/wordpress-clients_wp-api-angular/src/wp-api-angular.ts","WpApiLoaderFactory","http","any"
 "../test-repos/wordpress-clients_wp-api-angular/src/wp-api-angular.ts","WpApiLoaderFactory","funRet","WpApiStaticLoader"
 "../test-repos/wordpress-clients_wp-api-angular/src/utils.ts","stripTrailingSlash","value","string"
-"../test-repos/wordpress-clients_wp-api-angular/src/utils.ts","stripTrailingSlash","funRet","string"
+"../test-repos/wordpress-clients_wp-api-angular/src/utils.ts","stripTrailingSlash","funRet","string""/Users/iren/Code/ts-parser/test-files/functions-no-types.ts","escapeSpaces","s",

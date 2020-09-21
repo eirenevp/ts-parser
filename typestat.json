@@ -1,0 +1,16 @@
+{
+    "files": {
+        "renameExtensions": "ts"
+    },
+    "fixes": {
+        "incompleteTypes": true,
+        "missingProperties": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "strictNonNullAssertions": true
+    },
+    "include": [
+        "test-files/*.ts"
+    ],
+    "project": "./tsconfig.json"
+}

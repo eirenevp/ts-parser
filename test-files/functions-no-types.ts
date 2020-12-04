@@ -5,7 +5,7 @@ export enum Shell {
     Wsl
 }
 
-export function escapeSpaces(s: string, shell: any) {
+export function escapeSpaces(s, shell) {
     if (!s.includes(' ')) {
         return s;
     }
@@ -38,12 +38,12 @@ export function escapeSpaces(s: string, shell: any) {
 }
 
 
-export function getCommandForArgs(shell: any, args: any[]) {
+export function getCommandForArgs(shell, args) {
     args = args.map((a: any) => escapeSpaces(a, shell));
     return args.join(' ');
 }
 
-function correctPath(path: string) {
+function correctPath(path) {
     const disk = path.substr(0, 1).toLowerCase(); // For `C:\\Directory` it will be `C`
     path = path.replace(new RegExp('\\\\', 'g'), '/'); // After the line it will look like `C:/Directory`
     const pathWithoutDisk = path.substring(path.indexOf('/') + 1); // For `C:/Directory` it will be `Directory`
@@ -51,8 +51,8 @@ function correctPath(path: string) {
 }
 
 export function getCommandToChangeWorkingDirectory(
-    shell: Shell,
-    workingDirectory: string
+    shell,
+    workingDirectory
 ) {
     if (shell === Shell.Wsl) {
         workingDirectory = correctPath(workingDirectory);

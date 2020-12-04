@@ -2,8 +2,7 @@
 // with the text of the body, and the name of the function
 
 import * as fs from "fs";
-//import * as ts from "byots";
-import { createProjectSync, ts } from "@ts-morph/bootstrap";
+import * as ts from "typescript";
 var path = require("path");
 
 interface INodeEntry {
@@ -18,8 +17,6 @@ interface INodeEntry {
 export function parse(fileNames: string[], outFile: string[], options: ts.CompilerOptions): void {
 
     const program = ts.createProgram(fileNames, options);
-    const project = createProjectSync({ tsConfigFilePath: "tsconfig.json" });
-    const languageService = project.getLanguageService();
     const checker = program.getTypeChecker();
     const mainSourceFile = program.getSourceFiles().filter(x =>
         (program.getRootFileNames()[0]).includes(x.fileName))[0];
@@ -37,6 +34,7 @@ export function parse(fileNames: string[], outFile: string[], options: ts.Compil
     //     // parse it
     //     parseNode(sourceFile);
     // });
+
     function parseNode(node: ts.Node) {
         if (ts.isFunctionDeclaration(node)) {
             const symbol = checker.getSymbolAtLocation(node.name);

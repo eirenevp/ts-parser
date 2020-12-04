@@ -21,18 +21,19 @@ class Expr:
 
 def walk_dict(d, num2var, num2typ, out_file):
     if (d['id'] == "IS"):
-        print("(" +
-              num2var[d['X']] + "=" + num2typ[d['T']] + ")", end="", file=out_file)
+        if (d['T'] is not None):
+            print("(" +
+                  num2var[d['X']] + "=" + num2typ[d['T']] + ")", end="", file=out_file)
     elif (d['id'] == "AND"):
-        print("AND (", end="", file=out_file)
+        print("(AND", end="", file=out_file)
         for c in d['children']:
             walk_dict(c, num2var, num2typ, out_file)
-        print(")", end=" ", file=out_file)
+        print(")", end="", file=out_file)
     elif (d['id'] == "OR"):
-        print("OR (", end="", file=out_file)
+        print("(OR", end="", file=out_file)
         for c in d['children']:
             walk_dict(c, num2var, num2typ, out_file)
-        print(")", end=" ", file=out_file)
+        print(")", end="", file=out_file)
 
 
 def main():
